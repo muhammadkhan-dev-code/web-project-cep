@@ -183,48 +183,6 @@ student_job_portal/
 
 ---
 
-## 🗄️ Database Schema
-
-### `users`
-
-| Column     | Type                           | Description               |
-| ---------- | ------------------------------ | ------------------------- |
-| id         | INT PK AUTO_INCREMENT          | User ID                   |
-| full_name  | VARCHAR(100)                   | Full name or company name |
-| email      | VARCHAR(150) UNIQUE            | Login email               |
-| password   | VARCHAR(255)                   | Bcrypt hashed password    |
-| role       | ENUM(student, employer, admin) | User role                 |
-| is_banned  | TINYINT(1)                     | 0 = active, 1 = banned    |
-| created_at | TIMESTAMP                      | Registration time         |
-
-### `jobs`
-
-| Column      | Type                        | Description          |
-| ----------- | --------------------------- | -------------------- |
-| id          | INT PK AUTO_INCREMENT       | Job ID               |
-| employer_id | INT FK → users.id           | Posting employer     |
-| title       | VARCHAR(200)                | Job title            |
-| description | TEXT                        | Full job description |
-| type        | ENUM(part-time, internship) | Job type             |
-| location    | VARCHAR(100)                | City or Remote       |
-| deadline    | DATE                        | Application deadline |
-| is_deleted  | TINYINT(1)                  | Soft delete flag     |
-| created_at  | TIMESTAMP                   | Post time            |
-
-### `applications`
-
-| Column     | Type                              | Description                     |
-| ---------- | --------------------------------- | ------------------------------- |
-| id         | INT PK AUTO_INCREMENT             | Application ID                  |
-| job_id     | INT FK → jobs.id                  | Applied job                     |
-| student_id | INT FK → users.id                 | Applicant                       |
-| cover_note | TEXT                              | Student's cover note            |
-| status     | ENUM(pending, accepted, rejected) | Current status                  |
-| applied_at | TIMESTAMP                         | Application time                |
-| UNIQUE     | (job_id, student_id)              | Prevents duplicate applications |
-
----
-
 ## ⚙️ Setup Instructions
 
 ### Prerequisites
