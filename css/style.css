@@ -1,0 +1,260 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+:root {
+  --primary:      #1B4FD8;   
+  --primary-dark: #1340B0;
+  --accent:       #F97316;
+  --success:      #16A34A;
+  --danger:       #DC2626;
+  --warning:      #CA8A04;
+  --info:         #0EA5E9;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.btn-primary { background-color: var(--primary); border-color: var(--primary); }
+.btn-primary:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); }
+.btn-outline-primary { color: var(--primary); border-color: var(--primary); }
+.btn-outline-primary:hover { background-color: var(--primary); border-color: var(--primary); color: white; }
+
+.btn-warning { background-color: var(--accent); border-color: var(--accent); }
+.btn-warning:hover { background-color: #EA6D0E; border-color: #EA6D0E; }
+
+/* Navbar customization */
+.navbar { box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.navbar-brand { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--primary) !important; }
+.navbar-brand span { color: var(--accent); }
+
+/* Alert customization */
+.alert-danger { background-color: #FEF2F2; border-color: #FECACA; color: var(--danger); }
+.alert-success { background-color: #F0FDF4; border-color: #BBF7D0; color: var(--success); }
+.alert-info { background-color: #EEF3FF; border-color: #C7D7F9; color: var(--primary); }
+
+/* Card styling */
+.card { border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.card:hover { box-shadow: 0 8px 32px rgba(27,79,216,.15); transform: translateY(-2px); transition: all 0.2s ease; }
+
+/* Form controls */
+.form-control { border-color: #e2e8f0; border-radius: 8px; }
+.form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 0.2rem rgba(27,79,216,.15); }
+.form-label { font-weight: 600; color: #0f172a; font-size: 0.9rem; }
+
+/* Auth page styling */
+.auth-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #EEF3FF 0%, #F8FAFC 50%, #FFF4EC 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 40px rgba(27,79,216,.12);
+  padding: 2.5rem 2.25rem;
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.auth-logo span { color: var(--accent); }
+
+.auth-subtitle {
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 1.75rem;
+  font-size: 0.9rem;
+}
+
+/* Role toggle buttons */
+.role-tabs {
+  display: flex;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 1.5rem;
+  gap: 4px;
+}
+
+.role-tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  transition: all 0.15s ease;
+}
+
+.role-tab.active {
+  background: white;
+  color: var(--primary);
+  box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+
+/* Badge customization */
+.badge {
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.65rem;
+}
+
+.badge-primary { background-color: #EEF3FF; color: var(--primary); }
+.badge-warning { background-color: #FFF4EC; color: var(--accent); }
+.badge-success { background-color: #F0FDF4; color: var(--success); }
+.badge-danger { background-color: #FEF2F2; color: var(--danger); }
+.badge-secondary { background-color: #f1f5f9; color: #64748b; }
+
+/* Table styling */
+.table { font-size: 0.9rem; }
+.table thead th {
+  background: #f8fafc;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.table tbody tr:hover { background-color: #f8fafc; }
+
+/* Job card custom styling */
+.job-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.job-card:hover {
+  box-shadow: 0 8px 32px rgba(27,79,216,.15);
+  transform: translateY(-2px);
+}
+
+/* Sidebar for dashboards */
+.sidebar {
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 64px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+
+.sidebar-nav .nav-link {
+  color: #64748b;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  background-color: #EEF3FF;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.sidebar-nav .nav-link i { width: 18px; text-align: center; }
+
+/* Stat cards */
+.stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 8px 32px rgba(27,79,216,.15);
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.stat-icon.primary { background: #EEF3FF; color: var(--primary); }
+.stat-icon.accent { background: #FFF4EC; color: var(--accent); }
+.stat-icon.success { background: #F0FDF4; color: var(--success); }
+.stat-icon.danger { background: #FEF2F2; color: var(--danger); }
+
+.stat-value { font-size: 1.6rem; font-weight: 800; line-height: 1; }
+.stat-label { font-size: 0.8rem; color: #64748b; margin-top: 2px; }
+
+/* Search input with icon */
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input-wrapper i {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+}
+
+.search-input-wrapper .form-control {
+  padding-left: 2.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .auth-card { 
+    padding: 1.75rem 1.25rem;
+    margin-left: 1rem;
+    max-width: 100%;
+  }
+  .auth-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-logo { font-size: 1.3rem; }
+  .role-tabs { flex-direction: column; }
+  .auth-card {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
