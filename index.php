@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
             if ($user['is_banned']) {
                 $error = 'Your account has been banned. Contact admin.';
             } else {
+                // sesssion_start()
                 $_SESSION['user_id']   = $user['id'];
                 $_SESSION['user_name'] = $user['full_name'];
                 $_SESSION['role']      = $user['role'];

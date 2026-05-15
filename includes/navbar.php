@@ -1,7 +1,5 @@
 <?php
-// includes/navbar.php
-// Usage: include after session_start() & requireLogin()
-// $nav_active = 'dashboard' | 'jobs' | 'applications' | 'users' etc.
+
 $user = currentUser();
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
@@ -9,8 +7,9 @@ $user = currentUser();
         <a class="navbar-brand fw-bold" href="dashboard.php">
             <span style="color: var(--primary);">Job</span><span style="color: var(--accent);">Portal</span>
         </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 

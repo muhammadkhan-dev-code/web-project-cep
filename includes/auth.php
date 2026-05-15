@@ -1,5 +1,4 @@
 <?php
-// includes/auth.php - Session & Role Guard
 
 function requireLogin() {
     if (session_status() === PHP_SESSION_NONE) session_start();
